@@ -79,5 +79,18 @@ A simple 3-tier rule engine application (with a simple UI, API, and backend data
   Input this json in "Data (JSON format):" and press evaluate button which will hence generate the reult as True or False.
 
 ## Snippets
+
+### Sample run of Test Cases
+![Test_Cases_Run](screenshots/Test_Cases_Run.png)
+
+### Basic UI
 ![Basic UI](screenshots/UI.png)
+
+### Create Rule
+![Create Rule](screenshots/Create_Rule_Success.png)
+
+### Evaluate Rule
+![Evaluate Rule](screenshots/Evaluate_Rule.png)
+
+
 
