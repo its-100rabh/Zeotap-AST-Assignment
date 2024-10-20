@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3 Tier AST Rule Engine</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <style>
+      /* Optional: Add some styles for better visibility */
+      #combined-result {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+        white-space: pre-wrap; /* To preserve formatting */
+        background-color: #f9f9f9; /* Light background */
+        font-family: monospace; /* Monospace font for JSON */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>3 Tier Rule Engine</h1>
+
+      <!-- Create Rule Section -->
+      <form id="create-rule-form" class="form-section">
+        <label for="rule">Create Rule:</label>
+        <input type="text" id="rule" name="rule" required />
+        <button type="submit">Create Rule</button>
+      </form>
+
+      <!-- Evaluate Rule Section -->
+      <form id="evaluate-rule-form" class="form-section">
+        <div class="form-row">
+          <div class="form-col">
+            <label for="ast">AST (JSON format):</label>
+            <textarea id="ast" name="ast" required></textarea>
+          </div>
+          <div class="form-col">
+            <label for="data">Data (JSON format):</label>
+            <textarea id="data" name="data" required></textarea>
+          </div>
+        </div>
+        <button type="submit">Evaluate Rule</button>
+      </form>
+      <!-- Result Section for Evaluate Rule -->
+      <div id="result" class="result-section"></div>
+
+      <!-- Combine Rules Section -->
+      <form id="combine-rules-form" class="form-section">
+        <h3>Combine Rules</h3>
+        <label for="rule_strings">Rule Strings (comma-separated):</label>
+        <input
+          type="text"
+          id="rule_strings"
+          placeholder="Enter rule strings separated by commas"
+          required
+        />
+        <button type="submit">Combine Rules</button>
+      </form>
+
+      <!-- Display Combined AST Result in JSON format -->
+      <h3>Combined AST Result</h3>
+      <!-- Display Combined AST Result -->
+      <div id="combined-result" class="result-section combined-result"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
