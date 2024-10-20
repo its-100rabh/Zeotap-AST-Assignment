@@ -77,3 +77,6 @@ A simple 3-tier rule engine application (with a simple UI, API, and backend data
       }
 
   Input this json in "Data (JSON format):" and press evaluate button which will hence generate the reult as True or False.
+
+## Snippets
+![Basic UI](E:\Zeotap1\screenshots\UI.png)
